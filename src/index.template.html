@@ -1,0 +1,117 @@
+<!doctype html>
+<!-- @@FONT_LICENSE@@ -->
+<html lang="zh-CN" data-type="software" data-radius="sharp" data-buttons="block" data-motion="quiet">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="page-type" content="software">
+  <meta name="site-kind" content="gaming">
+  <meta name="theme-color" content="#173b34">
+  <meta name="description" content="用 12 道日常选择，看看你的性格放在北宋汴京，最像靠什么安身的哪类人。">
+  <meta property="og:title" content="你在北宋汴京，会是哪一层人？">
+  <meta property="og:description" content="用今天的做事习惯，测出你的北宋汴京市井身份。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="share.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>你在北宋汴京，会是哪一层人？</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1' y='1' width='30' height='30' fill='%23a94330'/%3E%3Cpath d='M7 12h18M16 7v19M16 16l7 4' stroke='%23fff3d5' stroke-width='2'/%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+  <style>
+  @@STYLE@@
+  </style>
+</head>
+<body data-view="home">
+  <header class="nav">
+    <div class="wrap masthead">
+      <a class="skip" href="#main">跳到主要内容</a>
+      <button id="home-button" class="wordmark" type="button" aria-label="汴京性格测评首页">
+        <span class="mark" aria-hidden="true">汴</span><span>汴京性格测评</span>
+      </button>
+      <a class="method-link" id="method-link" href="#method">测评说明</a>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" id="home" data-enter aria-labelledby="home-title">
+      <div class="wrap hero-wrap">
+        <div class="hero-copy">
+          <h1 id="home-title" tabindex="-1" data-enter-whole>你在北宋汴京，<br><span>会是哪一层人？</span></h1>
+          <p class="hero-lead">用你平时做事的方式作答，看看同样的性格放进北宋都城，能靠什么立足，又会在哪儿受限。</p>
+          <div class="hero-facts"><span>12 道日常选择</span><span>8 种市井身份</span></div>
+          <button id="start" type="button" class="btn btn-primary">开始测评 <i class="arrow" aria-hidden="true"></i></button>
+          <noscript><p>请启用 JavaScript 后开始测评。</p></noscript>
+        </div>
+      </div>
+      <div class="hero__art" data-visual data-enter-media>
+        <img id="cover-art" src="@@ART@@" width="2000" height="1000" alt="张择端《清明上河图》局部，汴河上有船，桥上有行人和摊贩。" fetchpriority="high">
+      </div>
+    </section>
+
+    <section class="question-screen" id="quiz" hidden aria-labelledby="question-title">
+      <div class="wrap quiz-wrap">
+        <div class="quiz-progress">
+          <div class="progress-heading"><span id="progress-label">第 1 题 / 共 12 题</span><span>选最像你的一项</span></div>
+          <progress id="progress" value="1" max="12" aria-label="答题进度"></progress>
+        </div>
+        <form id="quiz-form">
+          <h2 id="question-title" tabindex="-1"></h2>
+          <fieldset aria-labelledby="question-title" id="options"></fieldset>
+          <p id="question-notice" class="status" role="status"></p>
+          <div class="quiz-actions">
+            <button id="previous" type="button" class="btn btn-secondary">上一步</button>
+            <button id="next" type="submit" class="btn btn-primary">下一题 <i class="arrow" aria-hidden="true"></i></button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="result-screen" id="result" hidden aria-labelledby="result-title">
+      <div class="wrap result-wrap">
+        <div class="result-summary" id="identity-page">
+          <div class="result-identity">
+            <div class="result-class"><span>生计阶层</span><strong id="result-tier"></strong></div>
+            <h2 id="result-title" tabindex="-1"></h2>
+            <p id="result-line"></p>
+          </div>
+          <div class="result-actions">
+            <button id="save-card" type="button" class="btn btn-primary">保存结果图 <i class="download-mark" aria-hidden="true"></i></button>
+            <button id="review-answers" type="button" class="btn btn-secondary">回看答题</button>
+          </div>
+          <p id="download-notice" class="status" role="status"></p>
+        </div>
+        <dl class="resources" id="resources"></dl>
+        <div class="result-reading">
+          <h3>你的性格在汴京</h3>
+          <div class="trade-offs">
+            <div><h4>能帮你立足的地方</h4><p id="opportunity"></p></div>
+            <div><h4>这份生计的代价</h4><p id="cost"></p></div>
+          </div>
+          <h3>你的答题线索</h3>
+          <ol class="evidence" id="evidence"></ol>
+          <div class="result-end">
+            <p>设定为普通家底，并有机会进入对应行当。生计阶层按收入来源和能调动的资源划分，用于娱乐测评。</p>
+            <button id="reset" type="button" class="text-button">重新测评</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="method" class="site-foot closing">
+    <div class="wrap foot-wrap">
+      <details id="method-details">
+        <summary>测评口径与史料</summary>
+        <p>本测评按四组做事倾向找最接近的市井生计，如受雇、自营、开铺或积累经营本钱。原型以普通家底为共同设定，结果属于虚构匹配。真实处境受出身、性别、教育机会和本钱等条件影响。</p>
+        <p>题目和结果在当前浏览器里计算。答题进度保存在此设备，重测会清除旧进度。</p>
+        <p class="source-links"><a href="https://www.shidianguji.com/book/NGJ89241199901998071179/chapter/1lnokndxi81kw" target="_blank" rel="noreferrer">孟元老《东京梦华录》</a><a href="https://www.dpm.org.cn/collection/paint/228226.html" target="_blank" rel="noreferrer">故宫博物院藏品资料</a></p>
+      </details>
+      <p class="credit"><a href="https://commons.wikimedia.org/wiki/File:Along_the_River_During_the_Qingming_Festival_(detail_of_original).jpg" target="_blank" rel="noreferrer">图｜张择端《清明上河图》局部 · 公版</a></p>
+    </div>
+  </footer>
+  <script type="module" src="@@MOTION@@"></script>
+  <script>
+  @@QUIZ@@
+  @@APP@@
+  </script>
+</body>
+</html>
